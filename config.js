@@ -6,7 +6,7 @@ if (!WIT_TOKEN) {
 }
 
 
-var FB_PAGE_TOKEN = process.env.FB_PAGE_TOKEN || 'EAAGI9ncKQxgBAMPrvh7Ogr0mbWZCEfRlZBeWbDu7z4YI7AeI0JKuZCH0Y3lIki2MTd27scEFsVCcs5SdfiVKe1qK7W7PgLeLxUtt4FOsTgVx8xFmiHZCLwmcSeuCksvd2rVu4upDeMiBPhdBvs7M0LXy2jXkb07y7tuGD9xEXh7n10SKMWlm'
+var FB_PAGE_TOKEN = process.env.FB_PAGE_TOKEN || 'EAAGI9ncKQxgBAId2DD1fSohvkGmrBGCe2M3xD4SRdWhQ6YG99rpMgE2ZCA4pAMZBbUEKLr1ZCYo03qwQfAvxMouEy0dEiUTWVoq9THVUm1UuUpvQbo5Aa2aX2P7vyCX4HXlTZCeoNpqHecqfrTBUeBuUmJtuQ2NJXq1t3dMR2YgvyA7auZCg1'
 if (!FB_PAGE_TOKEN) {
 	throw new Error('Missing FB_PAGE_TOKEN. Go to https://developers.facebook.com/docs/pages/access-tokens to get one.')
 }
