@@ -99,6 +99,15 @@ var read = function (sender, message, reply) {
               const wps = firstEntityValue(entities, 'wps');
               console.log(">>>>>>>wps>>>>>>>");
               console.log(wps);
+              const free = firstEntityValue(entities, 'free');
+              console.log(">>>>>>>free>>>>>>>");
+              console.log(free);
+              const pdf = firstEntityValue(entities, 'pdf');
+              console.log(">>>>>>>pdf>>>>>>>");
+              console.log(pdf);
+              const download = firstEntityValue(entities, 'download');
+              console.log(">>>>>>>download>>>>>>>");
+              console.log(download);
               const celebrity = firstEntityValue(entities, 'notable_person');
               console.log(">>>>>>>celebrity>>>>>>>");
               console.log(celebrity);
@@ -110,6 +119,12 @@ var read = function (sender, message, reply) {
              reply(sender, "Hi! Welcome to WPS Office Bot!");
              }else if (wps) {
              reply(sender, "WPS Office is an office suite, perfectly compatible with Microsoft office (word, excel, powerpoint) for Microsoft Windows, Linux, iOS and Android OS."); 
+             }else if (free) {
+             reply(sender, "Yes, it is free and compatible with Microsoft Office but we also provide premium membership for advanced usage. Check our website https://www.wps.com/ for more complete information."); 
+             }else if (pdf) {
+             reply(sender, "PDF editing function is coming soon. Please check our website to keep you updated. We also have PDF to Word Converter. Check here https://www.wps.com/pdf-to-word"); 
+             } else if (download) {
+             reply(sender, "You can click https://www.wps.com/download/ to download."); 
              } else {
              console.log("Umm. I don't recognize that words.");
              reply(sender, "Umm. I am sorry. I don't understand what you are saying. You can ask me something about 'WPS'");
