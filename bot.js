@@ -96,6 +96,9 @@ var read = function (sender, message, reply) {
               const greetings = firstEntityValue(entities, 'greetings');
               console.log(">>>>>>>greetings>>>>>>>");
               console.log(greetings);
+              const wps = firstEntityValue(entities, 'wps');
+              console.log(">>>>>>>wps>>>>>>>");
+              console.log(wps);
               const celebrity = firstEntityValue(entities, 'notable_person');
               console.log(">>>>>>>celebrity>>>>>>>");
               console.log(celebrity);
@@ -103,11 +106,13 @@ var read = function (sender, message, reply) {
              // We can call wikidata API for more info here
               printWikidataDescription(celebrity, sender, reply)
              } else if (greetings) {
-             console.log("Hi! You can say something like 'Tell me about Beyonce'");
-             reply(sender, "Hi! You can say something like 'Tell me about Beyonce'");
+             console.log("Hi!");
+             reply(sender, "Hi! Welcome to WPS Office Bot!");
+             }else if (wps) {
+             reply(sender, "WPS Office is an office suite, perfectly compatible with Microsoft office (word, excel, powerpoint) for Microsoft Windows, Linux, iOS and Android OS."); 
              } else {
-             console.log("Umm. I don't recognize that name. Which celebrity do you want to learn about?");
-             reply(sender, "Umm. I don't recognize that name. Which celebrity do you want to learn about?");
+             console.log("Umm. I don't recognize that words.");
+             reply(sender, "Umm. I am sorry. I don't understand what you are saying. You can ask me something about 'WPS'");
                }
             })
 	
